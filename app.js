@@ -22,7 +22,7 @@ setInterval(function birdPosition() {
     console.log(currentTop)
     if ((currentTop >= 735)||((obstacleLeft<50)&&(obstacleLeft>-160)&&((nTop<passageTop)||(nTop>passageTop+200)))) {
         alert('Game Over! Your score is  '+ score +'!')
-        window.top.location = window.top.location
+        window.location.reload(true);
     }
    
 }, 30);
