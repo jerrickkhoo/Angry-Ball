@@ -9,26 +9,32 @@
    
 }
 
+#start{
+    text-align: center;
+    font-size: 35px;
+    height: 10px;
+}
+
 #obstacle1{
-    width: 160px;
+    width: 250px;
     height: 775px;
     background-color: green;
     position: relative;
-    animation: obstacle1 2.5s linear infinite;
+    animation: obstacle1 2.2s linear infinite;
 }
 
 @keyframes obstacle1{
     0%{left: 1200px}  
-    100%{left:-160px}
+    100%{left:-250px}
 }
 
 #passage{
-    width: 160px;
+    width: 250px;
     height:250px;
     background-color: lightblue;
     position: relative;
     top: -775px;
-    animation: obstacle1 2.5s linear infinite;
+    animation: obstacle1 2.2s linear infinite;
 }
 
 #bird{

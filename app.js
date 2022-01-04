@@ -2,10 +2,13 @@ const obstacle = document.getElementById('obstacle1')
 const passage = document.getElementById('passage')
 const bird = document.getElementById('bird')
 let flap = 0
+let score = 0
 
+function start () {
 passage.addEventListener('animationiteration', () => {
     let holePosition = -((Math.random() * 550) + 200);
     passage.style.top = holePosition + 'px';
+    score ++
 });
 
 setInterval(function birdPosition() {
@@ -13,15 +16,15 @@ setInterval(function birdPosition() {
     const obstacleLeft = parseInt(window.getComputedStyle(obstacle).getPropertyValue('left'))
     const passageTop = parseInt(window.getComputedStyle(passage).getPropertyValue('top'))
     const nTop = -(775-currentTop)
-    if ((currentTop >= 735)||((obstacleLeft<=50)&&(obstacleLeft>=-160)&&((nTop<passageTop)||(nTop
-        >passageTop+725)))) {
-        alert('Game Over')
-        bird.style.top = 150 + 'px';
-    }
     if (flap === 0 && currentTop <= 720) {
         bird.style.top = (currentTop + 15) + 'px';
     }
-    // console.log(passageTop)
+    console.log(currentTop)
+    if ((currentTop >= 735)||((obstacleLeft<50)&&(obstacleLeft>-160)&&((nTop<passageTop)||(nTop>passageTop+200)))) {
+        alert('Game Over! Your score is  '+ score +'!')
+        location.reload()
+    }
+   
 }, 30);
 
 
@@ -48,4 +51,14 @@ document.addEventListener('keypress', event => {
         fly()
     }
 })
+
+}
+document.addEventListener('keypress', event => {
+    if (event.code === 'Enter') {
+        start();
+        document.getElementById("start").style.display = "none";
+    }
+})
+
+
 
