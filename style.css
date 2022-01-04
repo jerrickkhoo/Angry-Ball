@@ -1,11 +1,7 @@
-/* *{
-    padding: 0;
-    margin: 0;
-} */
 
 #game{
     width: 1200px;
-    height: 950px;
+    height: 775px;
     border: 1px solid black;
     margin: auto;
     background-color: lightblue;
@@ -15,14 +11,14 @@
 
 #obstacle1{
     width: 160px;
-    height: 950px;
+    height: 775px;
     background-color: green;
     position: relative;
     animation: obstacle1 2.5s linear infinite;
 }
 
 @keyframes obstacle1{
-    0%{left: 1200px}
+    0%{left: 1200px}  
     100%{left:-160px}
 }
 
@@ -31,8 +27,7 @@
     height:250px;
     background-color: lightblue;
     position: relative;
-    left: 1200px;
-    top: -950px;
+    top: -775px;
     animation: obstacle1 2.5s linear infinite;
 }
 
