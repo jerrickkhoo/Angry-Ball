@@ -1,7 +1,7 @@
 
 #game{
     width: 1200px;
-    height: 900px;
+    height: 700px;
     border: 1px solid black;
     margin: auto;
     background-color: lightblue;
@@ -9,9 +9,11 @@
    
 }
 
-#start{
-   text-align: center;
-    font-size: 30px;
+button{
+    position: relative;
+   font-size: 25px;
+   left: 520px;
+   top: 290px;
 }
 
 #space{
@@ -26,7 +28,8 @@
 
 #obstacle1{
     width: 250px;
-    height: 900px;
+    height: 700px;
+    left: 1200px;
     background-color: green;
     position: relative;
 }
@@ -36,17 +39,22 @@
     100%{left:-250px}
 }
 
+@keyframes revert{
+    0%{left: 1200px}  
+    100%{left:-250px}
+}
+
 .animated{
     animation: obstacle1 2.7s linear infinite;
-
 }
 
 #passage{
     width: 250px;
     height:250px;
+    left: 1200px;
     background-color: lightblue;
     position: relative;
-    top: -900px;
+    top: -700px;
 }
 
 #bird{
