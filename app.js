@@ -79,7 +79,6 @@ setInterval(function lose() {
         alert('Game Over! Your score is ' + score + '!')
         // document.getElementById("obstacle1").classList.remove("animated")
         // document.getElementById("passage").classList.remove("animated")
-        score = 0;
         document.location.reload()
     }
 }, 15);
