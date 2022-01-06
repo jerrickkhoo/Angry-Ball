@@ -4,7 +4,7 @@
     height: 700px;
     border: 1px solid black;
     margin: auto;
-    background-image: url('https://www.desktopbackground.org/p/2014/07/26/799251_flappy-bird-charizard-edition-on-scratch_1920x1080_h.png');    
+    background-image: url('https://wallpaperaccess.com/full/4622688.png');    
     background-size: 1200px 700px;    
     background-repeat: no-repeat;
     overflow: hidden;
@@ -42,9 +42,10 @@ h1{
 
 #points{
     text-align: center;
-    background-color: green;
+    background-color: lightgoldenrodyellow;
     font-family: 'Merriweather', serif;
     font-size: 20px;
+    color: grey;
 }
 #obstacle1{
     width: 250px;
