@@ -6,8 +6,24 @@ let score = 0
 let gameStatus = false
 
 
+bird.style.display = "none";
+
+function gravity(){
+setInterval(function() {
+    const currentTop = parseInt(window.getComputedStyle(bird).getPropertyValue('top'))
+    if (currentTop < 640 && gameStatus == true) {
+        bird.style.top = (currentTop + 2) + 'px';
+        console.log(currentTop)
+    }
+}, 1)
+}
+
+
 function startPage() {
     gameStatus = true
+
+    bird.style.display = 'block';
+
     const start = document.getElementById("start");
         start.style.display = "none";
     
@@ -17,6 +33,10 @@ function startPage() {
 
     const title = document.querySelector("h1");
         title.style.display = "none";
+
+    const angryBall = document.querySelector("#angryBall");
+    angryBall.style.display = "none";
+    
 }
 
 function start() {
@@ -65,7 +85,7 @@ function start() {
         const passageTop = parseInt(window.getComputedStyle(passage).getPropertyValue('top'))
         const nTop = -(700 - currentTop)
 
-        if ((currentTop >= 660) || ((obstacleLeft < 50) && (obstacleLeft > -250) && ((nTop <= passageTop) || (nTop > passageTop + 225))) && (gameStatus == true)) {
+        if ((currentTop >= 640) || ((obstacleLeft < 70) && (obstacleLeft > -250) && ((nTop <= passageTop) || (nTop > passageTop + 190))) && (gameStatus == true)) {
             gameStatus = false
             document.getElementById("obstacle1").classList.remove("animated")
             document.getElementById("passage").classList.remove("animated")
@@ -74,14 +94,7 @@ function start() {
         }
     }, 15);
 
-    setInterval(function gravity() {
-        const currentTop = parseInt(window.getComputedStyle(bird).getPropertyValue('top'))
-        if (currentTop < 660 && gameStatus == true) {
-            bird.style.top = (currentTop + 2) + 'px';
-            console.log(currentTop)
-        }
-    }, 1)
-
+    
 }
 
 function restart() {
@@ -95,8 +108,8 @@ function restart() {
 
 document.querySelector('#start').addEventListener('click', event => {
     startPage()
-    start();
-   
+    start()
+    setTimeout(gravity,800);
 })
 
 
