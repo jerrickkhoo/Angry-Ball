@@ -6,23 +6,14 @@ let score = 0
 let gameStatus = false
 
 
-points.innerText = 'Score: ' + score
-
 function startPage() {
     gameStatus = true
     const start = document.getElementById("start");
-    if (start.style.display === "none") {
-        start.style.display = "block";
-    } else {
         start.style.display = "none";
-    }
+    
 
     const space = document.getElementById("space");
-    if (space.style.display === "none") {
-        space.style.display = "block";
-    } else {
         space.style.display = "none";
-    }
 }
 
 function start() {
@@ -42,7 +33,7 @@ function start() {
 
     function fly() {
         let flapCount = 0;
-        if (gameStatus == true) {
+        if (gameStatus = true) {
             const flapInterval = setInterval(function () {
                 let currentTop = parseInt(window.getComputedStyle(bird).getPropertyValue('top'))
                 if (currentTop > 30) {
