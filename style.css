@@ -12,21 +12,30 @@
 }
 
 body{
-    background-image: url('https://cdn.mwallpapers.com/photos/celebrities/hd-wallpapers/tile-cartoon-pokemon-pattern-android-iphone-hd-wallpaper-background-downloadhd-wallpapers-desktop-background-android-iphone-1080p-4k-ljdsd.jpg');
-}
+background-image: url('https://pbs.twimg.com/media/EI511U5U0AE60x9.jpg');}
 
 button{
     position: relative;
    font-size: 25px;
-   left: 520px;
+   left: 500px;
    top: 290px;
    font-family: 'Merriweather', serif;
+   background-color: lightyellow;
+   color: grey;
 }
 
 #space{
     text-align: center;
     font-size: 30px;
     font-family: 'Merriweather', serif;
+    color: white;
+}
+
+h1{
+    text-align: center;
+    font-size: 70px;
+    font-family: 'Merriweather', serif;
+    color: lightgoldenrodyellow;
 }
 
 #points{
@@ -79,3 +88,4 @@ button{
     border-radius: 50%;
 
 }
+

@@ -14,6 +14,9 @@ function startPage() {
 
     const space = document.getElementById("space");
         space.style.display = "none";
+
+    const title = document.querySelector("h1");
+        title.style.display = "none";
 }
 
 function start() {
