@@ -3,7 +3,6 @@ const passage = document.getElementById('passage')
 const bird = document.getElementById('bird')
 let points = document.getElementById('points')
 let score = 0
-let gameStatus = false
 
 
 bird.style.display = "none";
@@ -11,7 +10,7 @@ bird.style.display = "none";
 function gravity(){
 setInterval(function() {
     const currentTop = parseInt(window.getComputedStyle(bird).getPropertyValue('top'))
-    if (currentTop < 640 && gameStatus == true) {
+    if (currentTop < 640) {
         bird.style.top = (currentTop + 2) + 'px';
         console.log(currentTop)
     }
@@ -56,11 +55,10 @@ function start() {
 
     function fly() {
         let flapCount = 0;
-        if (gameStatus = true) {
             const flapInterval = setInterval(function () {
                 let currentTop = parseInt(window.getComputedStyle(bird).getPropertyValue('top'))
                 if (currentTop > 30) {
-                    bird.style.top = (currentTop - 27) + 'px'
+                    bird.style.top = (currentTop - 25) + 'px'
                 };
                 if (flapCount > 3) {
                     clearInterval(flapInterval);
@@ -69,7 +67,6 @@ function start() {
                 flapCount++;
             }
                 , 15);
-        }
     }
 
     document.addEventListener('keypress', event => {
@@ -85,8 +82,7 @@ function start() {
         const passageTop = parseInt(window.getComputedStyle(passage).getPropertyValue('top'))
         const nTop = -(700 - currentTop)
 
-        if ((currentTop >= 640) || ((obstacleLeft < 70) && (obstacleLeft > -250) && ((nTop <= passageTop) || (nTop > passageTop + 190))) && (gameStatus == true)) {
-            gameStatus = false
+        if ((currentTop >= 640) || ((obstacleLeft < 70) && (obstacleLeft > -250) && ((nTop-13 <= passageTop) || (nTop > passageTop + 207))) && (gameStatus == true)) {
             document.getElementById("obstacle1").classList.remove("animated")
             document.getElementById("passage").classList.remove("animated")
             alert('Game Over! Your score is ' + score + '! Close this to restart.')

@@ -1,3 +1,23 @@
+@keyframes obstacle1{
+    0%{left: 1200px}  
+    100%{left:-250px}
+}
+
+@keyframes flicker{
+    0%{opacity:100%}  
+    100%{opacity:0%}
+}
+
+@keyframes angryBall{
+    0%{top:500px; left:1px}
+    100%{top:500px; left: 1200px}
+}
+
+@keyframes title{
+    0%{color: lightgoldenrodyellow}
+    50%{color: red}
+    100%{color: lightgoldenrodyellow}
+}
 body{
 background-image: url('https://pbs.twimg.com/media/EI511U5U0AE60x9?format=jpg&name=large');
 background-size: 1980px 1080px;
@@ -57,26 +77,6 @@ h1{
     position: relative;
 }
 
-@keyframes obstacle1{
-    0%{left: 1200px}  
-    100%{left:-250px}
-}
-
-@keyframes flicker{
-    0%{opacity:100%}  
-    100%{opacity:0%}
-}
-
-@keyframes angryBall{
-    0%{top:500px; left:1px}
-    100%{top:500px; left: 1200px}
-}
-
-@keyframes title{
-    0%{color: lightgoldenrodyellow}
-    50%{color: red}
-    100%{color: lightgoldenrodyellow}
-}
 
 .animated{
     animation: obstacle1 2.7s linear infinite;
