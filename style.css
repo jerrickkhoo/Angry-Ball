@@ -20,18 +20,21 @@ button{
    font-size: 25px;
    left: 520px;
    top: 290px;
-   font-family: 'Merriweather', serif;}
+   font-family: 'Merriweather', serif;
+}
 
 #space{
     text-align: center;
     font-size: 30px;
-    font-family: 'Merriweather', serif;}
+    font-family: 'Merriweather', serif;
+}
 
 #points{
     text-align: center;
     background-color: green;
-    font-family: 'Merriweather', serif;}
-
+    font-family: 'Merriweather', serif;
+    font-size: 20px;
+}
 #obstacle1{
     width: 250px;
     height: 700px;
