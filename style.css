@@ -12,7 +12,9 @@
 }
 
 body{
-background-image: url('https://pbs.twimg.com/media/EI511U5U0AE60x9.jpg');}
+background-image: url('https://pbs.twimg.com/media/EI511U5U0AE60x9?format=jpg&name=large');
+background-size: 1600px 1000px;
+}
 
 button{
     position: relative;
