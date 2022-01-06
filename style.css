@@ -19,8 +19,15 @@
     50%{color: red}
     100%{color: lightgoldenrodyellow}
 }
+
+/* @keyframes night{
+    0%{background-image:url('https://wallpaperaccess.com/full/4622688.png')}
+    100%{background-image:url('http://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/5f844eb2e410c7a.png')}
+} */
+
 body{
-background-image: url('https://pbs.twimg.com/media/EI511U5U0AE60x9?format=jpg&name=large');
+background-image: url('https://www.walldevil.co/wallpapers/w12/pattern-tile-cartoon-pokemon.jpg');
+background-color:white;
 background-size: 1980px 1080px;
 }
 
@@ -28,35 +35,43 @@ background-size: 1980px 1080px;
     width: 1200px;
     height: 700px;
     border: 1px solid black;
-    margin: auto;
     background-image: url('https://wallpaperaccess.com/full/4622688.png');    
     background-size: 1200px 700px;    
-    background-repeat: no-repeat;
     overflow: hidden;
+    position:absolute;
+    top: 10%;
+    left: 19%;
 }
 
+.background{
+animation: night 4s linear infinite;
+}
 
 button{
     position: relative;
-   font-size: 25px;
-   left: 500px;
-   top: 400px;
-   font-family: 'Merriweather', serif;
-   background-color: lightyellow;
-   color: grey;
+   font-size: 18px;
+   font-family: 'Press Start 2P', cursive;
+    background-color: transparent;
+    border:transparent;
+   color: white;
+   cursor: pointer;
+   width:1200px;
+   height:700px;
+   top:-250px;
 }
+
 
 #space{
     text-align: center;
-    font-size: 30px;
-    font-family: 'Merriweather', serif;
+    font-size: 20px;
+    font-family: 'Press Start 2P', cursive;
     color: white;
 }
 
 h1{
     text-align: center;
-    font-size: 70px;
-    font-family: 'Merriweather', serif;
+    font-size: 55px;
+    font-family: 'Press Start 2P', cursive;
     color: lightgoldenrodyellow;
     animation: title 4.5s linear infinite;
 }
@@ -64,8 +79,8 @@ h1{
 #points{
     text-align: center;
     background-color: lightgoldenrodyellow;
-    font-family: 'Merriweather', serif;
-    font-size: 20px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 17px;
     color: grey;
 }
 #obstacle1{
@@ -115,5 +130,5 @@ background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOIAAADfCAM
 background-size: 80px 80px;    
 position: relative;
     border-radius: 50%;
-    animation: angryBall 1.5s linear infinite;
+    animation: angryBall linear 1.5s infinite;
 }

@@ -10,7 +10,7 @@ bird.style.display = "none";
 function gravity(){
 setInterval(function() {
     const currentTop = parseInt(window.getComputedStyle(bird).getPropertyValue('top'))
-    if (currentTop < 640) {
+    if (currentTop < 630) {
         bird.style.top = (currentTop + 2) + 'px';
         console.log(currentTop)
     }
@@ -41,6 +41,8 @@ function startPage() {
 function start() {
     document.querySelector("#passage").classList.add('animated')
     document.querySelector("#obstacle1").classList.add('animated')
+    // document.querySelector("#game").classList.add('background')
+
 
     passage.addEventListener('animationiteration', () => {
         let holePosition = -((Math.random() * 500) + 200);
@@ -82,7 +84,7 @@ function start() {
         const passageTop = parseInt(window.getComputedStyle(passage).getPropertyValue('top'))
         const nTop = -(700 - currentTop)
 
-        if ((currentTop >= 640) || ((obstacleLeft < 70) && (obstacleLeft > -250) && ((nTop-13 <= passageTop) || (nTop > passageTop + 207))) && (gameStatus == true)) {
+        if ((currentTop >= 630) || ((obstacleLeft < 70) && (obstacleLeft > -250) && ((nTop-10 <= passageTop) || (nTop > passageTop + 200))) && (gameStatus == true)) {
             document.getElementById("obstacle1").classList.remove("animated")
             document.getElementById("passage").classList.remove("animated")
             alert('Game Over! Your score is ' + score + '! Close this to restart.')
