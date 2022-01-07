@@ -12,14 +12,13 @@ setInterval(function() {
     const currentTop = parseInt(window.getComputedStyle(bird).getPropertyValue('top'))
     if (currentTop < 630) {
         bird.style.top = (currentTop + 2) + 'px';
-        console.log(currentTop)
+        // console.log(currentTop)
     }
 }, 1)
 }
 
 
 function startPage() {
-    gameStatus = true
 
     bird.style.display = 'block';
 
@@ -84,7 +83,7 @@ function start() {
         const passageTop = parseInt(window.getComputedStyle(passage).getPropertyValue('top'))
         const nTop = -(700 - currentTop)
 
-        if ((currentTop >= 630) || ((obstacleLeft < 70) && (obstacleLeft > -250) && ((nTop-10 <= passageTop) || (nTop > passageTop + 200))) && (gameStatus == true)) {
+        if ((currentTop >= 630) || ((obstacleLeft < 70) && (obstacleLeft > -250) && ((nTop <= passageTop) || (nTop > passageTop + 200))) ) {
             document.getElementById("obstacle1").classList.remove("animated")
             document.getElementById("passage").classList.remove("animated")
             alert('Game Over! Your score is ' + score + '! Close this to restart.')
@@ -101,7 +100,6 @@ function restart() {
     bird.style.top = 150 + 'px'
     document.getElementById("obstacle1").classList.add("animated")
     document.getElementById("passage").classList.add("animated")
-    gameStatus = 1
 }
 
 document.querySelector('#start').addEventListener('click', event => {

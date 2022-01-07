@@ -27,7 +27,7 @@
 
 body{
 background-image: url('https://www.walldevil.co/wallpapers/w12/pattern-tile-cartoon-pokemon.jpg');
-background-color:white;
+/* background-color:white; */
 background-size: 1980px 1080px;
 }
 
@@ -43,9 +43,9 @@ background-size: 1980px 1080px;
     left: 19%;
 }
 
-.background{
+/* .background{
 animation: night 4s linear infinite;
-}
+} */
 
 button{
     position: relative;
@@ -57,7 +57,7 @@ button{
    cursor: pointer;
    width:1200px;
    height:700px;
-   top:-250px;
+   top:-228px;
 }
 
 
