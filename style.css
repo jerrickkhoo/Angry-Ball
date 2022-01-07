@@ -38,9 +38,8 @@ background-size: 1980px 1080px;
     background-image: url('https://wallpaperaccess.com/full/4622688.png');    
     background-size: 1200px 700px;    
     overflow: hidden;
-    position:absolute;
-    top: 10%;
-    left: 19%;
+    margin:auto    
+
 }
 
 /* .background{
